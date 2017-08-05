@@ -6,10 +6,10 @@
     <transmission name="${joint_name}_transmssion">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${joint_name}">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
-      </joint>  
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
       <actuator name="${joint_name}_motor">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -17,7 +17,7 @@
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
   </xacro:macro>
-  
+
   <xacro:macro name="inertial_cuboid_macro" params="mass x_length y_length z_length">
     <inertial>
       <mass value="${mass}" />
@@ -27,10 +27,10 @@
                izz="${(1/12) * mass* (x_length*x_length+ y_length*y_length)}" />
     </inertial>
   </xacro:macro>
-  
+
   <xacro:macro name="inertial_cuboid__with_pose_macro" params="mass x_length y_length z_length *origin">
     <inertial>
-      <insert_block name="origin"/>
+      <xacro:insert_block name="origin"/>
       <mass value="${mass}" />
       <inertia ixx="${(1/12) * mass* (y_length*y_length+ z_length*z_length)}" ixy="0.0" ixz="0.0"
                iyy="${(1/12) * mass* (x_length*x_length+ z_length*z_length)}" iyz="0.0"
@@ -47,15 +47,15 @@
                izz="${(2/5) * mass* ( (diameter*0.5)) * (diameter*0.5))}" />
     </inertial>
   </xacro:macro>
-  
+
   <xacro:macro name="inertial_sphere_with_pose_macro" params="mass diameter *origin">
     <inertial>
-      <insert_block name="origin"/>
+      <xacro:insert_block name="origin"/>
       <mass value="${mass}" />
       <inertia ixx="${(2/5) * mass* ( (diameter*0.5)) * (diameter*0.5))}" ixy="0.0" ixz="0.0"
                iyy="${(2/5) * mass* ( (diameter*0.5)) * (diameter*0.5))}" iyz="0.0"
                izz="${(2/5) * mass* ( (diameter*0.5)) * (diameter*0.5))}" />
     </inertial>
-  </xacro:macro> 
+  </xacro:macro>
 
 </robot>

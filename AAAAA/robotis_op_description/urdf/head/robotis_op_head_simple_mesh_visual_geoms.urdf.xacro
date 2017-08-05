@@ -2,7 +2,7 @@
 
 <robot  name="robotis_op2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<macro name="neck_visual_geom_macro">
+<xacro:macro name="neck_visual_geom_macro">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -10,9 +10,9 @@
       </geometry>
       <material name="grey"/>
     </visual>
-</macro>  
+</xacro:macro>  
 
-<macro name="head_visual_geom_macro">
+<xacro:macro name="head_visual_geom_macro">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -20,10 +20,10 @@
       </geometry>
       <material name="grey"/>
     </visual>
-</macro>  
+</xacro:macro>  
 
 
-<macro name="pmdcamboard_geom_macro">
-</macro>  
+<xacro:macro name="pmdcamboard_geom_macro">
+</xacro:macro>  
 
 </robot>

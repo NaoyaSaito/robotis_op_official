@@ -3,7 +3,7 @@
 <robot  name="robotis_op2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <macro name="robotis_op_arm_macro">
+  <xacro:macro name="robotis_op_arm_macro">
 
   <link name="MP_BACK_L">
     <xacro:inertial_cuboid__with_pose_macro mass="0.010" x_length="0.01" y_length="0.01" z_length="0.01" >
@@ -239,5 +239,5 @@
 
 
 
-  </macro>
+  </xacro:macro>
 </robot>

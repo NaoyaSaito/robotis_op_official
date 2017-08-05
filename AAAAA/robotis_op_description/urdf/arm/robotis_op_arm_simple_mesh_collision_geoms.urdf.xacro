@@ -2,60 +2,57 @@
 
 <robot  name="robotis_op2" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<macro name="back_l_collision_geom_macro">
+<xacro:macro name="back_l_collision_geom_macro">
     <collision>
-      <origin xyz="-0.0031158909 0.020443695 -0.019663084" />
       <geometry>
         <box size="0.001 0.001 0.001"  scale="1 1 1"/>
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="shoulder_l_collision_geom_macro">
+<xacro:macro name="shoulder_l_collision_geom_macro">
     <collision>
-      <origin xyz="-0.013522619 -0.010264050 0.0013935747" />
       <geometry>
-        <box size="0.016 0.033 0.02165" />
+        <mesh filename="package://robotis_op_description/meshes/shoulder_l_coll.stl"  scale="1 1 1"/>
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_high_l_collision_geom_macro">
+<xacro:macro name="arm_high_l_collision_geom_macro">
     <collision>
-      <origin xyz="-0.036239 0.000734 0.000660" />
       <geometry>
-        <box size="0.06 0.032 0.035" />
+        <mesh filename="package://robotis_op_description/meshes/arm_high_l_coll.stl"  scale="1 1 1"/>
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_low_l_collision_geom_macro">
+<xacro:macro name="arm_low_l_collision_geom_macro">
     <collision>
       <origin xyz="0.016 0.016 0" rpy="0 0 0" />
       <geometry>
         <box size="0.032 0.032 0.035" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_fix_l_collision_geom_macro">
+<xacro:macro name="arm_gripper_fix_l_collision_geom_macro">
     <collision>
       <origin xyz="0.016 0 0" rpy="0 0 0" />
       <geometry>
         <box size="0.064 0.032 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_fix_dummy_l_collision_geom_macro">
+<xacro:macro name="arm_gripper_fix_dummy_l_collision_geom_macro">
     <collision>
       <geometry>
         <box size="0.032 0.005 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_mov_l_collision_geom_macro">
+<xacro:macro name="arm_gripper_mov_l_collision_geom_macro">
     <collision name="COL_MP_ARM_GRIPPER_MOV_L">
       <origin xyz="0.016 0 0" rpy="0 0 0" />
       <geometry>
@@ -68,61 +65,60 @@
         <box size="0.002 0.01 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="back_r_collision_geom_macro">    
+<xacro:macro name="back_r_collision_geom_macro">    
     <collision>
       <geometry>
         <box size="0.001 0.001 0.001" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="shoulder_r_collision_geom_macro">    
+<xacro:macro name="shoulder_r_collision_geom_macro">    
     <collision>
-      <origin xyz="-0.013523 0.010264 0.001394" />
+      <origin xyz="0 0 0" rpy="1.5707963  0 3.14" />
       <geometry>
-        <box size="0.016 0.033 0.02165" />
+        <mesh filename="package://robotis_op_description/meshes/shoulder_r_coll.stl"  scale="1 1 1"/>
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_high_r_collision_geom_macro"> 
+<xacro:macro name="arm_high_r_collision_geom_macro"> 
     <collision>
-      <origin xyz="-0.036239 0.000734 -0.000660" />
       <geometry>
-        <box size="0.06 0.032 0.035"/>
+        <mesh filename="package://robotis_op_description/meshes/arm_high_r_coll.stl"  scale="1 1 1"/>
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_low_r_collision_geom_macro"> 
+<xacro:macro name="arm_low_r_collision_geom_macro"> 
     <collision>
       <origin xyz="0.016 -0.016 0" rpy="0 0 0" />
       <geometry>
         <box size="0.032 0.032 0.035" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_fix_r_collision_geom_macro"> 
+<xacro:macro name="arm_gripper_fix_r_collision_geom_macro"> 
     <collision>
       <origin xyz="0.016 0 0" rpy="0 0 0" />
       <geometry>
         <box size="0.064 0.032 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_fix_dummy_r_collision_geom_macro"> 
+<xacro:macro name="arm_gripper_fix_dummy_r_collision_geom_macro"> 
     <collision>
       <geometry>
         <box size="0.032 0.005 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
-<macro name="arm_gripper_mov_r_collision_geom_macro"> 
+<xacro:macro name="arm_gripper_mov_r_collision_geom_macro"> 
     <collision name="COL_MP_ARM_GRIPPER_MOV_R">
       <origin xyz="0.016 0 0" rpy="0 0 0" />
       <geometry>
@@ -135,7 +131,7 @@
         <box size="0.002 0.01 0.032" />
       </geometry>
     </collision>
-</macro> 
+</xacro:macro> 
 
 
 
