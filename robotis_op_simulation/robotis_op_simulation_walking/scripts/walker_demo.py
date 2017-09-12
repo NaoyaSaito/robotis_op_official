@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
-from robotis_op_gazebo.darwin import Darwin
+from robotis_op_simulation_walking.darwin import Darwin
 
 
 if __name__=="__main__":
