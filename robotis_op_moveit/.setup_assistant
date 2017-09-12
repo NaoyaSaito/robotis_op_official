@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robotis_op_description
+    relative_path: robots/robotis_op.urdf
+  SRDF:
+    relative_path: config/robotis_op.srdf
+  CONFIG:
+    author_name: Saito Naoya
+    author_email: saito3110.naoya@gmail.com
+    generated_timestamp: 1502117981
