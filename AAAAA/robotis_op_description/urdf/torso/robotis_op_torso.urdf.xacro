@@ -4,7 +4,7 @@
 
   <xacro:macro name="robotis_op_torso_macro">
 
-  <link name="base_link"/>  
+  <link name="base_link"/>
 
   <link name="MP_BODY">
     <inertial>
@@ -32,8 +32,8 @@
           <gaussianNoise>0</gaussianNoise>
           <xyzOffset>0 0 0</xyzOffset>
           <rpyOffset>0 0 -0.703220730592</rpyOffset>
-        </plugin>     
-      </gazebo>  
+        </plugin>
+      </gazebo>
 
   </xacro:macro>
 </robot>
